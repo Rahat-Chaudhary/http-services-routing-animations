@@ -1,0 +1,9 @@
+<input type="text" class="form-control"
+(keyup.enter) = "addPost(title)" #title>
+<ul class="list-group">
+  <li @slide class="list-group-item" *ngFor = "let post of posts" >
+      <button  class="btn btn-defult btn-sm" (click) = "updatePost(post)">Update</button>
+      <button class="btn btn-defult btn-sm" (click) = "deletePost(post)">Delete</button>
+      {{ post.title }} 
+  </li>
+</ul>
